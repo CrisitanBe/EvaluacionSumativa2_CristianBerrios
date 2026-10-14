@@ -6,13 +6,13 @@ from .models import Cliente,Atencion
 
 admin.register(Cliente)
 class ClineteAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'mascota')
+    list_display = ('nombre', 'mascota','Sintomas','Prioridad')
     list_editable = ('sintomas')
     list_per_page = 25
 
 admin.register(Atencion)
 class AtencionAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'mascota')
+    list_display = ('pabellon', 'asistencia','costo','Diagnosticoprevio')
     list_editable = ('sintomas',)
     list_per_page = 25
 
@@ -20,8 +20,8 @@ class AtencionAdmin(admin.ModelAdmin):
 
 @admin.register(Cliente)
 class ClineteAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'mascota')
+    list_display = ('nombre', 'mascota','Sintomas','Prioridad')
 
 @admin.register(Atencion)
 class AtencionAdmin(admin.ModelAdmin):
-    list_display = ('asistencia','pabellon')
+    list_display = ('pabellon', 'asistencia','costo','Diagnosticoprevio')
